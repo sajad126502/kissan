@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+}
+
+/* Hero styles */
+.hero {
+  @apply rounded-xl p-12 mb-8 text-white bg-gradient-to-r from-primary to-accent;
+  /* slightly stronger shadow */
+  box-shadow: 0 8px 24px rgba(40,116,240,0.12);
+}
+
+/* Buttons */
+.btn-primary { @apply bg-primary text-white px-4 py-2 rounded-md shadow hover:shadow-lg transition transform hover:-translate-y-0.5 }
+
+/* Make primary/secondary accent buttons */
+.btn-accent { @apply bg-accent text-black px-4 py-2 rounded-md shadow hover:shadow-lg }
+
+/* Card image helper */
+.card-image { @apply h-44 sm:h-48 md:h-56 overflow-hidden bg-white rounded-t-md }
+
+/* Subtle animations */
+@keyframes floatUp { from { transform: translateY(6px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+.animate-floatUp { animation: floatUp 360ms ease-out both }
