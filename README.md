@@ -14,4 +14,4 @@ Authentic, natural Kashmiri products and comfortable room bookings near Gulmarg.
 - Product data is in `data/products.ts` — edit or add products there.
 - Deploy to Vercel or any static host that serves the `out/` folder.
 
-Enjoy! 👋
+Enjoy! 👋# kissan
