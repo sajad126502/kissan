@@ -15,3 +15,4 @@ Authentic, natural Kashmiri products and comfortable room bookings near Gulmarg.
 - Deploy to Vercel or any static host that serves the `out/` folder.
 
 Enjoy! 👋# kissan
+# kissan
