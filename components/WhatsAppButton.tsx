@@ -5,7 +5,7 @@ export default function WhatsAppButton({ message, children }: { message: string,
   const encoded = encodeURIComponent(message)
   const href = `https://wa.me/${phone.replace('+','') || phone}?text=${encoded}`
   return (
-    <a href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 btn-accent">
+    <a href={href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 btn-accent animate-pop transform transition-transform duration-200 hover:scale-105 focus:scale-105">
       {children || 'Contact via WhatsApp'}
     </a>
   )

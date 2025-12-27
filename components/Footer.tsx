@@ -4,7 +4,7 @@ import { site } from '../lib/siteConfig'
 
 export default function Footer(){
   return (
-    <footer className="mt-16 bg-gray-50 border-t">
+    <footer className="mt-16 bg-gray-50 border-t animate-floatUp">
       <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
           <img src="/logo.png" alt={site.title} className="h-10 w-auto object-contain mb-3" />

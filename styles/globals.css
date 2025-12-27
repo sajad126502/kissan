@@ -30,4 +30,19 @@ body {
 
 /* Subtle animations */
 @keyframes floatUp { from { transform: translateY(6px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
-.animate-floatUp { animation: floatUp 360ms ease-out both }
+@keyframes slideUp { from { transform: translateY(12px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes pop { from { transform: scale(.96); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+.animate-floatUp { animation: floatUp 360ms cubic-bezier(.22,.9,.36,1) both }
+.animate-slideUp { animation: slideUp 420ms cubic-bezier(.22,.9,.36,1) both }
+.animate-fadeIn { animation: fadeIn 300ms ease-out both }
+.animate-pop { animation: pop 220ms cubic-bezier(.22,.9,.36,1) both }
+
+/* Buttons: add transform and accessible motion handling */
+.btn-primary { @apply bg-primary text-white px-4 py-2 rounded-md shadow hover:shadow-lg transition-transform duration-200 transform-gpu hover:-translate-y-0.5 }
+.btn-accent { @apply bg-accent text-black px-4 py-2 rounded-md shadow hover:shadow-lg transition-transform duration-200 transform-gpu hover:scale-105 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-floatUp, .animate-slideUp, .animate-fadeIn, .animate-pop { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important }
+  .btn-primary, .btn-accent { transition: none !important }
+}
