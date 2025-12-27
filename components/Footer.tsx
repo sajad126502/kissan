@@ -30,7 +30,7 @@ export default function Footer(){
         </div>
       </div>
 
-      <div className="py-4 border-t text-center text-sm text-gray-500">© {new Date().getFullYear()} KISSAN COTTAGE GULMARG — Made in Kashmir</div>
+      <div className="py-4 border-t text-center text-sm text-gray-500">© {new Date().getFullYear()} KISSAN COTTAGE GULMARG — Kashmir</div>
     </footer>
   )
 }
