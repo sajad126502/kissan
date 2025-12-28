@@ -11,13 +11,7 @@ import Script from 'next/script'
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <CartProvider>
-      <Head>
-        <title>{site.title}</title>
-        <meta name="description" content="Authentic, natural Kashmiri products and comfortable room bookings near Gulmarg." />
-        <meta property="og:title" content={site.title} />
-        <meta property="og:description" content="Authentic, natural Kashmiri products and comfortable room bookings near Gulmarg." />
-        <link rel="icon" href="/favicon.svg" />
-        <Script
+       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-YFQG7RHXLR"
         strategy="afterInteractive"
       />
@@ -30,6 +24,13 @@ export default function App({ Component, pageProps }: AppProps) {
           gtag('config', 'G-YFQG7RHXLR');
         `}
       </Script>
+      <Head>
+        <title>{site.title}</title>
+        <meta name="description" content="Authentic, natural Kashmiri products and comfortable room bookings near Gulmarg." />
+        <meta property="og:title" content={site.title} />
+        <meta property="og:description" content="Authentic, natural Kashmiri products and comfortable room bookings near Gulmarg." />
+        <link rel="icon" href="/favicon.svg" />
+       
       </Head>
       <div className="min-h-screen flex flex-col">
         <Header />
