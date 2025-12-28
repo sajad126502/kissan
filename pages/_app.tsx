@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import { CartProvider } from '../context/CartContext'
 import Toast from '../components/Toast'
 import { site } from '../lib/siteConfig'
+import Script from 'next/script'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,6 +17,19 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:title" content={site.title} />
         <meta property="og:description" content="Authentic, natural Kashmiri products and comfortable room bookings near Gulmarg." />
         <link rel="icon" href="/favicon.svg" />
+        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-YFQG7RHXLR"
+        strategy="afterInteractive"
+      />
+
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YFQG7RHXLR');
+        `}
+      </Script>
       </Head>
       <div className="min-h-screen flex flex-col">
         <Header />
